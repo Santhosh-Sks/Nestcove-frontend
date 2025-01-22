@@ -19,7 +19,7 @@ const CategoryPage = () => {
     const getFeedListings = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3005/properties?category=${category}`,
+          `https://nestcove-be.onrender.com/properties?category=${category}`,
           {
             method: "GET",
           }
