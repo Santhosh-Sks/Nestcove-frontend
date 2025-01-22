@@ -20,7 +20,7 @@ const PropertyList = () => {
   const getPropertyList = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://localhost:3005/users/${user._id}/properties`,
+        `https://nestcove-be.onrender.com/users/${user._id}/properties`,
         {
           method: "GET",
         }
