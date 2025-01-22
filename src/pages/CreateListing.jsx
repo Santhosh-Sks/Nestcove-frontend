@@ -126,7 +126,7 @@ const creatorId = user ? user._id : null;
       });
 
  
-      const response = await fetch("http://localhost:3005/properties/create", {
+      const response = await fetch("https://nestcove-be.onrender.com/properties/create", {
         method: "POST",
         body: listingForm,
       });
