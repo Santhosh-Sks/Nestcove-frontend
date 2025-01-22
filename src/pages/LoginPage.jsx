@@ -15,7 +15,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3005/auth/login", {
+      const response = await fetch("https://nestcove-be.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
