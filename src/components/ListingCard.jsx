@@ -33,7 +33,7 @@ const ListingCard = ({
     if (user?._id !== creator._id) {
       try {
         const response = await fetch(
-          `http://localhost:3005/users/${user?._id}/${listingId}`,
+          `https://nestcove-be.onrender.com/users/${user?._id}/${listingId}`,
           {
             method: isLiked ? "DELETE" : "PATCH",
             headers: {
@@ -79,7 +79,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
             <img
-              src={`http://localhost:3005/${photo.replace('public\\', '')}`} 
+              src={`https://nestcove-be.onrender.com/${photo.replace('public\\', '')}`} 
                   alt={`Slide ${index}`}
                 className="listing-image"
                   />
