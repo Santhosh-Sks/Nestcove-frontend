@@ -22,7 +22,7 @@ const ListingDetails = () => {
 
   const getListingDetails = useCallback(async () => {
     try {
-      const response = await fetch(`http://localhost:3005/properties/${listingId}`, { method: "GET" });
+      const response = await fetch(`https://nestcove-be.onrender.com/properties/${listingId}`, { method: "GET" });
       const data = await response.json();
       setListing(data);
       setLoading(false);
@@ -62,7 +62,7 @@ const ListingDetails = () => {
         totalPrice: listing.price * dayCount,
       };
 
-      const response = await fetch("http://localhost:3005/bookings/create", {
+      const response = await fetch("https://nestcove-be.onrender.com/bookings/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookingForm),
@@ -93,7 +93,7 @@ const ListingDetails = () => {
           {listing?.listingPhotoPaths?.map((item, index) => (
             <img
               key={index}
-              src={`http://localhost:3005/${item.replace("public", "").split("/").pop()}`}
+              src={`https://nestcove-be.onrender.com/${item.replace("public", "").split("/").pop()}`}
               alt={`Photo of ${listing.title}`}
             />
           ))}
@@ -104,7 +104,7 @@ const ListingDetails = () => {
         <hr />
 
         <div className="profile">
-          <img src={`http://localhost:3005/${listing.creator.profileImagePath.replace("public", "")}`} alt={`${listing.creator.firstName} ${listing.creator.lastName}`} />
+          <img src={`https://nestcove-be.onrender.com/${listing.creator.profileImagePath.replace("public", "")}`} alt={`${listing.creator.firstName} ${listing.creator.lastName}`} />
           <h3>Hosted by {listing.creator.firstName} {listing.creator.lastName}</h3>
         </div>
         <hr />
