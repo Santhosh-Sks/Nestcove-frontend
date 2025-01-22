@@ -16,8 +16,8 @@ const Listings = () => {
     try {
       const response = await fetch(
         selectedCategory !== "All"
-          ? `http://localhost:3005/properties?category=${selectedCategory}`
-          : "http://localhost:3005/properties",
+          ? `https://nestcove-be.onrender.com/properties?category=${selectedCategory}`
+          : "https://nestcove-be.onrender.com/properties",
         {
           method: "GET",
         }
