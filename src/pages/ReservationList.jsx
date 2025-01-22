@@ -17,7 +17,7 @@ const ReservationList = () => {
   const getReservationList = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3005/users/${userId}/reservations`,
+        `https://nestcove-be.onrender.com/users/${userId}/reservations`,
         {
           method: "GET",
         }
