@@ -56,7 +56,11 @@ const Navbar = () => {
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
             <img
-             src={`https://nestcove-be.onrender.com/${user.profileImagePath?.replace("public", "")}`}
+             src={
+              user.profileImagePath
+                ? `https://nestcove-be.onrender.com/${user.profileImagePath.replace("public", "")}`
+                : "/assets/default-profile.png"
+              }
               alt={user.name ? `${user.name}'s profile` : "User profile"}
               style={{ objectFit: "cover", borderRadius: "50%" }}
             />
