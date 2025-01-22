@@ -17,7 +17,7 @@ const TripList = () => {
   const getTripList = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://localhost:3005/users/${userId}/trips`,
+        `https://nestcove-be.onrender.com/users/${userId}/trips`,
         {
           method: "GET",
         }
